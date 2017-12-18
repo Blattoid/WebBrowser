@@ -1,0 +1,24 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="WebBrowser.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="Homepage" Type="System.String" Scope="User">
+      <Value Profile="(Default)">https://www.google.com</Value>
+    </Setting>
+    <Setting Name="RememberLastPage" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="useHTTPS" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="LastPage" Type="System.String" Scope="User">
+      <Value Profile="(Default)">about:blank</Value>
+    </Setting>
+    <Setting Name="browserName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">WebView</Value>
+    </Setting>
+    <Setting Name="browserIcon" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+  </Settings>
+</SettingsFile>
