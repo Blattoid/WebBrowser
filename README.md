@@ -7,7 +7,7 @@ I wanted to use the webBrowser control in WinForms to make a fully fledged web b
 
 ### The main window
 
-![Diagram of the main window](relative/path/to/img.jpg?raw=true "Main UI diagram")
+![Diagram of the main window](https://raw.githubusercontent.com/floathandthing/WebBrowser/master/MainUI.png?raw=true "Main UI diagram")
 
 #### Reload
 Sends the refresh command to the page, reloading it.
@@ -31,3 +31,17 @@ This is a small label containing a short string, like "Idle", "Loading" or somet
 This button opens the Settings menu, which we are just about to talk about.
 
 ### Settings
+![Settings dialog](https://raw.githubusercontent.com/floathandthing/WebBrowser/master/Settings.png?raw=true "Settings dialog")
+
+#### Homepage
+This textbox contains the page that is first loaded when the browser opens. Leave blank to disable this feature.
+
+#### Remember last page visited
+If checked, the browser keeps track of the last page you visited was, and the next time you open the browser it opens that page.
+
+#### Use HTTPS
+By default, the browser attempts to use HTTPS automatically. You can specify to use http in the URL bar, but this makes HTTPS the default option. I recommend that this box remains checked to ensure privacy, but if you want, it can be disabled.
+
+#### Choose custom icon
+If you have an image that you want to set to the program icon, you can select it here. The image has to be in the .ico format, but there are countless online conversion tools to convert ordinary images into this format. Note that if you delete the icon image, the browser will not be able to load it at startup, and will revert to the standard icon.
+
