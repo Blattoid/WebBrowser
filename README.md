@@ -7,7 +7,7 @@ I wanted to use the webBrowser control in WinForms to make a fully fledged web b
 
 ### The main window
 
-![Diagram of the main window](https://raw.githubusercontent.com/floathandthing/WebBrowser/master/MainUI.png?raw=true "Main UI diagram")
+![Diagram of the main window](https://raw.githubusercontent.com/floathandthing/WebBrowser/master/MainUI.PNG "Diagram of the main window")
 
 #### Reload
 Sends the refresh command to the page, reloading it.
@@ -31,7 +31,7 @@ This is a small label containing a short string, like "Idle", "Loading" or somet
 This button opens the Settings menu, which we are just about to talk about.
 
 ### Settings
-![Settings dialog](https://raw.githubusercontent.com/floathandthing/WebBrowser/master/Settings.png?raw=true "Settings dialog")
+![Settings dialog](https://raw.githubusercontent.com/floathandthing/WebBrowser/master/Settings.PNG "Settings dialog")
 
 #### Homepage
 This textbox contains the page that is first loaded when the browser opens. Leave blank to disable this feature.
