@@ -1,6 +1,6 @@
 # WebBrowser
 
-I wanted to use the webBrowser control in WinForms to make a fully fledged web browser. Obviously I didn't make the webBrowser element, just the UI surrounding it. The intent is for it to be customisable, with options to change the program icon and title. There will probably be more options in the future, so stay tuned for those. If you are interested in the code, there are tons of comments so you can understand how it works.
+I wanted to use the webBrowser control in WinForms to make a fully fledged web browser. Obviously I didn't make the webBrowser element, just the UI surrounding it. The intent is for it to be customizable, with options to change the program icon and title. There will probably be more options in the future, so stay tuned for those. If you are interested in the code, there are tons of comments so you can understand how it works.
 
 
 ## What everything is and what it does

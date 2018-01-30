@@ -65,11 +65,10 @@ namespace WebBrowser
         {
             if (e.KeyData == Keys.Enter)
             {
-                loadPage(); //execute the loadPage void to tell the webBrowser to load the page. Duh.
-
                 //supress the ding sound caused by trying to put an enter in a single line textbox.
                 e.SuppressKeyPress = true;
 
+                loadPage(); //execute the loadPage void to tell the webBrowser to load the page.
             }
         }
 
