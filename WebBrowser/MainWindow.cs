@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -119,7 +119,8 @@ namespace WebBrowser
         }
 
         //simply calls the webBrowser's refresh function, along with updating the status indicator.
-        private void refreshButton_Click(object sender, EventArgs e) {
+        private void refreshButton_Click(object sender, EventArgs e)
+        {
             updateStatus("Refreshing...");
             webBrowser.Refresh();
         }
@@ -170,14 +171,64 @@ namespace WebBrowser
         }
 
         //simply makes the webBrowser navigate to the homepage defined in the settings.
-        private void homeButton_Click(object sender, EventArgs e) {
+        private void homeButton_Click(object sender, EventArgs e)
+        {
             updateStatus("Going home...");
             webBrowser.Navigate(Properties.Settings.Default.Homepage);
         }
 
         //when the document is finished loading, update the status.
-        private void webBrowser_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e){ updateStatus("Idle"); }
+        private void webBrowser_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e) { updateStatus("Idle"); }
         //purely for saving me some typing.
         private void updateStatus(string status) { statusIndicator.Text = statusIndicatorPrefix + status; }
+
+        private int isFullScreen = 0;
+        private void PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
+        {
+            switch (e.KeyData)
+            {
+                //Because the event is fired twice, we have to do all this to ignore the first event trigger, and only respond to the second.
+                case Keys.F11:
+                    {
+                        /*This mess somehow works itself out. 
+                         * It starts at 0, and the first event increments it to 1, which makes it fullscreen and is followed by another incrementing it to 2.
+                         * Upon pressing f11 again, it goes to windowed mode and is incremented to 3. The second event this time sets it back to 0.
+                         * 0-->1-->2
+                         * 2-->3-->0
+                        */
+                        if (isFullScreen == 0)
+                        {
+                            isFullScreen = 1;
+                            this.TopMost = true;
+                            this.FormBorderStyle = FormBorderStyle.None;
+                            this.WindowState = FormWindowState.Maximized;
+                        }
+                        else if (isFullScreen == 1)
+                        {
+                            isFullScreen = 2;
+                        }
+                        else if (isFullScreen == 2)
+                        {
+                            isFullScreen = 3;
+                            this.TopMost = false;
+                            this.FormBorderStyle = FormBorderStyle.Sizable;
+                            this.WindowState = FormWindowState.Normal;
+                        }
+                        else if (isFullScreen == 3)
+                        {
+                            isFullScreen = 0;
+                        }
+                        else
+                        {
+                            MessageBox.Show("Internal error changing fullscreen state. Error code "+isFullScreen.ToString());
+                        }
+                        break;
+                    }
+                default:
+                    {
+                        break;
+                    }
+            }
+        }
     }
 }
