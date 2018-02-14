@@ -190,7 +190,7 @@ namespace WebBrowser
                 //Because the event is fired twice, we have to do all this to ignore the first event trigger, and only respond to the second.
                 case Keys.F11:
                     {
-                        /*This mess somehow works itself out. 
+                        /*This is needed to handle the dual event triggers when pressing F11 (I don't know why this happens)
                          * It starts at 0, and the first event increments it to 1, which makes it fullscreen and is followed by another incrementing it to 2.
                          * Upon pressing f11 again, it goes to windowed mode and is incremented to 3. The second event this time sets it back to 0.
                          * 0-->1-->2
